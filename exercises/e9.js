@@ -4,12 +4,23 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithBalanceOverOneHundred(array) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
+import { bankAccounts } from "../data/data";
+
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
+  let object = null;
+  let resultArray = [];
 
+  for(let i = 0; i < array.length; i++) {
+    if (array[i].balance > 100) {
+      object = array[i];
+      resultArray.push(object);
+    }
+  }
+  return resultArray;
 }
 
-
+let account = getClientsWithBalanceOverOneHundred(bankAccounts);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"

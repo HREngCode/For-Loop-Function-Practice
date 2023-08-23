@@ -10,10 +10,15 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+    }
+    return sum / array.length;
 }
 
-
+let array = [22, 45, 4, 65];
 /** 
  * PART 2
  * Create a getStringSum(str) function that returns the sum of any integers that are in the string.
@@ -23,8 +28,18 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-
+  let sum = 0
+  // console.log(str.length)
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= 0 && str[i] <= 9) {
+      sum += parseInt(str[i]);
+    }
+  }
+  return sum;
 }
+
+var sumOfNumbers = getStringSum("GH2U87A");
+var sumOfNumbers2 = getStringSum("GHIUJUHSG");
 
 
 // === TEST YOURSELF ===

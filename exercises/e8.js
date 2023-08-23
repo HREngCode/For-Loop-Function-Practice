@@ -2,12 +2,32 @@
 // EXERCISE 8
 // Return an array with a bank account object with the greatest balance value
 // Array example: bankAccounts in /data/data.js
+
+
+
 // getClientWithGreatestBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
+import { bankAccounts } from "../data/data";
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
+  let max = Number.MIN_VALUE;
+  let object = null;
+  let resultArray = [];
 
+  for(let i = 0; i < array.length; i++) {
+    if (array[i].balance > 0 && max < array[i].balance) {
+
+      max = array[i].balance;
+      object = array[i];
+    }
+  }
+  if (object !== null) {
+    resultArray.push(object);
+  }
+  return resultArray;
 }
+
+let account = getClientWithGreatestBalance(bankAccounts);
 
 
 

@@ -3,12 +3,27 @@
 // In case there is no account that has balance > 0 return an empty array
 // Array example: bankAccounts in /data/data.js
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
+import { bankAccounts } from "../data/data";
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
-}
+  let min = Number.MAX_VALUE;
+  let object = null;
+  let resultArray = [];
 
+  for(let i = 0; i < array.length; i++) {
+    if (array[i].balance > 0 && array[i].balance < min) {
+
+      min = array[i].balance;
+      object = array[i];
+    }
+  }
+  if (object !== null) {
+    resultArray.push(object);
+  }
+  return resultArray;
+}
+let account = getClientWithLeastPositiveBalance(bankAccounts);
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"
 // If the test has all tests passed, switch to the next exercise file
