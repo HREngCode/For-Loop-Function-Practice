@@ -20,9 +20,6 @@ export function getClientsWithLetterInName(array, letter) {
     }
   }return resultArray;
 }
-
-let account1 = getClientsWithLetterInName(bankAccounts, 'a');
-let account2 = getClientsWithLetterInName(bankAccounts, 'c');
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
 // If the test has all tests passed, switch to the next exercise file

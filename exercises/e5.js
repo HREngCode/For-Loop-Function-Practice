@@ -16,8 +16,6 @@ export function getAllClientNames(array) {
   return names;
 }
 
-let clientNames = getAllClientNames(bankAccounts);
-
 
 
 // === TEST YOURSELF ===

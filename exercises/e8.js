@@ -27,8 +27,6 @@ export function getClientWithGreatestBalance(array) {
   return resultArray;
 }
 
-let account = getClientWithGreatestBalance(bankAccounts);
-
 
 
 // === TEST YOURSELF ===

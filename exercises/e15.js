@@ -6,9 +6,16 @@
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
+  let completeArray = []
 
+  for(let x = 0; x < arr1.length; x++) {
+    completeArray.push(arr1[x]);
+  }
+  for(let y = 0; y < arr2.length; y++) {
+    completeArray.push(arr2[y]);
+  }
+  return completeArray;
 }
-
 
 
 // === TEST YOURSELF ===

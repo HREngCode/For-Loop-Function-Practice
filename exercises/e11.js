@@ -8,35 +8,25 @@ import { bankAccounts } from "../data/data";
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
-  let withdrawalArray = []
+  let withdrawalTotals = []
 
   for(let i = 0; i < array.length; i++) {
-    console.log(array[i])
     let results = 0;
-    withdrawalArray = array[i].withdrawals;
-    for(let x = 0; x < withdrawalArray.length; x++) {
-      if(array[i].withdrawals !== undefined) {
-        console.log(withdrawalArray[x]);
+    let withdrawalArray = array[i].withdrawals;
+
+    if(withdrawalArray != undefined) {
+      for(let x = 0; x < withdrawalArray.length; x++) {
         results += withdrawalArray[x];
       }
-      else {
-        results = 0;
-      }
-
-      withdrawalArray.push(results);
-    }
-
-
-    console.log(results);
-    
-    }
-    console.log(withdrawalArray);
-    return withdrawalArray; 
+      withdrawalTotals.push(results);
+    } 
+    else {
+      results = 0;
+      withdrawalTotals.push(results);
+    }    
   }
-
-let account = getAllWithdrawals(bankAccounts);
-console.log(account);
+    return withdrawalTotals;     
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"

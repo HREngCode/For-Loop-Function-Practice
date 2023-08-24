@@ -38,9 +38,6 @@ export function getStringSum(str) {
   return sum;
 }
 
-var sumOfNumbers = getStringSum("GH2U87A");
-var sumOfNumbers2 = getStringSum("GHIUJUHSG");
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
