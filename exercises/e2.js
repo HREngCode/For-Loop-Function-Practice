@@ -5,11 +5,8 @@
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
   var numWithSquareRoots = [];
-  for (var i = 0; i < max; i++) {
-    var value = i * i;
-    if (value < max) {
-      numWithSquareRoots.push(value);
-    }
+  for (let i = 0; i * i < max; i++) {
+    numWithSquareRoots.push(i * i);
   }
   return numWithSquareRoots;
 }

@@ -1,4 +1,3 @@
-
 // EXERCISE 3
 // Make sure to solve two parts beneath
 
@@ -18,7 +17,6 @@ export function getAverage(array) {
     return sum / array.length;
 }
 
-let array = [22, 45, 4, 65];
 /** 
  * PART 2
  * Create a getStringSum(str) function that returns the sum of any integers that are in the string.
@@ -29,7 +27,6 @@ let array = [22, 45, 4, 65];
 export function getStringSum(str) {
   // Your code goes here...
   let sum = 0
-  // console.log(str.length)
   for (let i = 0; i < str.length; i++) {
     if (str[i] >= 0 && str[i] <= 9) {
       sum += parseInt(str[i]);

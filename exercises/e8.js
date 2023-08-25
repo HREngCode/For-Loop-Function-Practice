@@ -10,21 +10,13 @@ import { bankAccounts } from "../data/data";
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-  let max = Number.MIN_VALUE;
-  let object = null;
-  let resultArray = [];
-
-  for(let i = 0; i < array.length; i++) {
-    if (array[i].balance > 0 && max < array[i].balance) {
-
-      max = array[i].balance;
-      object = array[i];
+  let maxBalance = [array[0]];
+  for(let user of array) {
+    if (user.balance > maxBalance[0].balance) {
+      maxBalance[0] = user;
     }
   }
-  if (object !== null) {
-    resultArray.push(object);
-  }
-  return resultArray;
+  return maxBalance;
 }
 
 
